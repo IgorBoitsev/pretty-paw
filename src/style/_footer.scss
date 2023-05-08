@@ -1,0 +1,70 @@
+.footer {
+  margin-bottom: 30px;
+
+  @include md {
+    display: grid;
+    grid-template-columns: 1fr 181px;
+    row-gap: 42px;
+    grid-template-areas: 
+    'logo socials'
+    'copyright developers';
+  }
+
+  @include lg {
+    margin-bottom: 50px;
+    grid-template-columns: 1fr 240px;
+    row-gap: 72px;
+  }
+
+  &__logo {
+    grid-area: logo;
+    width: 200px;
+    margin-bottom: 32px;
+
+    @include md {
+      margin-bottom: 0;
+    }
+    @include lg {
+      width: 360px;
+    }
+  }
+
+  &__social-list {
+    margin-bottom: 52px;
+    grid-area: socials;
+
+    @include md {
+      margin-bottom: 0;
+    }
+  }
+
+  &__social-item {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-right: 16px;
+
+    @include lg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__developers {
+    margin-bottom: 52px;
+    grid-area: developers;
+
+    @include md {
+      margin-bottom: 0;
+    }
+  }
+
+  &__developer {
+    color: $secondaryColor;
+  }
+
+  &__copyright {
+    color: $secondaryColor;
+    grid-area: copyright;
+  }
+}

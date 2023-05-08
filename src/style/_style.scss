@@ -1,0 +1,132 @@
+html {
+  position: relative;
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 300;
+  background-color: $primaryColor;
+  color: $whiteText;
+  line-height: 1.4;
+  font-size: 16px;
+
+  @include lg {
+    font-size: 20px;
+  }
+}
+img, svg, video {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+button {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3, p, figure, fieldset {
+  margin: 0;
+}
+h1, h2, h3 {
+  font-weight: 1000;
+}
+iframe {
+  border: none;
+}
+
+// Скрытые от пользователя элементы
+.visual-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  // z-index: 8;
+}
+
+// У .container внутренние отступы только боковые
+// Отступы внутренние сверху и снизу задаются у section
+.container {
+  max-width: 1380px;
+  padding-left: 16px;
+  padding-right: 16px;
+  // padding-top: 16px;
+  // padding-bottom: 16px;
+  margin: 0 auto;
+
+  @include sm {
+    padding-left: 24px;
+    padding-right: 24px;
+    // padding-top: 24px;
+    // padding-bottom: 24px;
+  }
+  @include md {
+    padding-left: 32px;
+    padding-right: 32px;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
+  }
+  @include xl {
+    padding-left: 30px;
+    padding-right: 30px;
+    // padding-top: 30px;
+    // padding-bottom: 30px;
+  }
+  @include xxl {
+    // padding-top: 60px;
+    // padding-bottom: 60px;
+    max-width: 2560px;
+    margin: 0 auto; 
+  }
+}
+.link-main {
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 20px;
+  gap: 4px;
+  font-weight: 1000;
+  font-size: 16px;
+  line-height: 1;
+  color: $orangeText;
+  background-color: #ffffff;
+  border-radius: 80px;
+  width: 155px;
+  height: 36px;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('../img/arrow_right.svg') center/contain no-repeat;
+  }
+
+  @include lg {
+    font-size: 20px;
+    width: 209px;
+    height: 50px;
+    gap: 10px;
+  }
+}
