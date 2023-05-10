@@ -1,8 +1,5 @@
 .location {
 
-  // &__container {
-  // }
-
   &__list {
 
     @include lg {
@@ -235,7 +232,6 @@
     }
   }
 
-
   &__title {
     font-weight: 1000;
     font-size: 20px;
@@ -266,9 +262,4 @@
       display: none;
     }
   }
-
 }
-// .container {
-// }
-// .visual-hidden {
-// }
