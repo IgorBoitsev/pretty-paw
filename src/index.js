@@ -31,6 +31,7 @@ sliderInit('.career__slider', {
       spaceBetween: 26
     },
     1240: {
+      pagination: false,
       slidesPerView: 4,
       spaceBetween: 30
     }
