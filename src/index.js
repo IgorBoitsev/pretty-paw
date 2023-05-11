@@ -4,6 +4,7 @@ import 'swiper/scss/pagination';
 import './index.scss';
 import { sliderInit } from './modules/sliders';
 import { videoBackgroundInit } from './modules/videobackground';
+import { menuControl } from './modules/menuControl';
 
 // use modules
 
@@ -40,3 +41,4 @@ sliderInit('.career__slider', {
 });
 
 videoBackgroundInit('.video-bg');
+menuControl('.navigation__button', '.navigation__list', '.navigation__item');

@@ -114,6 +114,7 @@ iframe {
   border-radius: 80px;
   width: 155px;
   height: 36px;
+  transition: color 0.3s ease;
 
   &:after {
     content: '';
@@ -121,6 +122,13 @@ iframe {
     width: 16px;
     height: 16px;
     background: url('../img/arrow_right.svg') center/contain no-repeat;
+  }
+
+  &:hover {
+    color: $blackText;
+  }
+  &:hover:after {
+    fill: $blackText;
   }
 
   @include lg {

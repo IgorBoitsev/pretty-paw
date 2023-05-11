@@ -2,13 +2,73 @@
 
   &__list {
     display: none;
+    position: absolute;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $secondaryColor;
+    z-index: -1;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    text-align: center;
+
+    @include lg {
+      padding-top: 146px;
+      padding-bottom: 146px;
+    }
+
+    @include xl {
+      position: static;
+      display: flex;
+      align-items: center;
+      height: auto;
+      padding: 0;
+    }
   }
 
-  // &__item {
-  // }
+  &__item:not(:last-child) {
+    margin-bottom: 40px;
 
-  // &__link {
-  // }
+    @include xl {
+      margin-right: 8px;
+    }
+  }
+
+  &__item {
+
+    @include xl {
+      margin-bottom: 0px !important;
+    }
+  }
+
+  &__link {
+    font-weight: 1000;
+    font-size: 16px;
+
+    &:hover {
+      color: $primaryColor;
+    }
+
+    @include xl {
+      display: block;
+      padding: 12px 32px;
+      border: 2px solid $primaryColor;
+      border-radius: 80px;
+    }
+
+    &-active {
+      color: $primaryColor;
+      pointer-events: none;
+  
+      @include xl {
+        color: $whiteText;
+        background-color: $primaryColor;
+      }
+    }
+  }
+
 
   &__button {
     display: block;
@@ -21,8 +81,12 @@
       height: 50px;
     }
 
-    &__active {
-      background: url('../img/close.svg');
+    @include xl {
+      display: none;
+    }
+
+    &-active {
+      background: url('../img/close.svg') center/contain;
     }
   }
 }
