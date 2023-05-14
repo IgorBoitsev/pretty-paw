@@ -5,6 +5,7 @@ import './index.scss';
 import { sliderInit } from './modules/sliders';
 import { videoBackgroundInit } from './modules/videobackground';
 import { menuControl } from './modules/menuControl';
+import { locationHover } from './modules/locationHover';
 
 // use modules
 
@@ -12,6 +13,11 @@ sliderInit('.about__slider', {
   pagination: {
     el: '.about__slider-pagination'
   }
+});
+
+const careerImageSlides = document.querySelectorAll('.career__image-slide');
+careerImageSlides.forEach((slide, index) => {
+  slide.classList.add(`career__image-slide_${index % 2 ? 'even' : 'odd'}`)
 });
 
 sliderInit('.career__slider', {
@@ -42,3 +48,4 @@ sliderInit('.career__slider', {
 
 videoBackgroundInit('.video-bg');
 menuControl('.navigation__button', '.navigation__list', '.navigation__item');
+locationHover();

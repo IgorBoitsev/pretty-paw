@@ -46,6 +46,8 @@
   &__link {
     font-weight: 1000;
     font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
 
     &:hover {
       color: $primaryColor;
@@ -56,6 +58,10 @@
       padding: 12px 32px;
       border: 2px solid $primaryColor;
       border-radius: 80px;
+
+      &:focus {
+        background-color: $primaryColor;
+      }
     }
 
     &-active {

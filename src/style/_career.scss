@@ -57,22 +57,34 @@
 
   &__image-slide {
     @include md {
-      &:nth-child(even) {
+      // &:nth-child(even) {
+      //   width: calc(100% - 68% - 40px) !important;
+      // }
+      &_even {
         width: calc(100% - 68% - 40px) !important;
       }
-      &:nth-child(odd) {
+      // &:nth-child(odd) {
+      //   width: 34% !important;
+      // }
+      &_odd {
         width: 34% !important;
       }
     }
 
     @include lg {
-      &:nth-child(even) {
+      // &:nth-child(even) {
+      //   width: calc(100% - 68% - 52px) !important;
+      // }
+      &_even {
         width: calc(100% - 68% - 52px) !important;
       }
     }
 
     @include xl {
-      &:nth-child(even) {
+      // &:nth-child(even) {
+      //   width: calc(100% - 68% - 60px) !important;
+      // }
+      &_even {
         width: calc(100% - 68% - 60px) !important;
       }
     }
