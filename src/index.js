@@ -7,6 +7,7 @@ import { sliderInit } from './modules/sliders';
 import { videoBackgroundInit } from './modules/videobackground';
 import { menuControl } from './modules/menuControl';
 import { locationHover } from './modules/locationHover';
+import { initScrollToTolButton } from './modules/scrollToTopButton';
 
 sliderInit('.about__slider', {
   pagination: {
@@ -49,3 +50,4 @@ sliderInit('.career__slider', {
 videoBackgroundInit('.video-bg');
 menuControl('.navigation__button', '.navigation__list', '.navigation__item');
 locationHover();
+initScrollToTolButton('arrow-up', true);
